@@ -215,7 +215,7 @@ class Japx {
         relationships[key] = {_data: typeIdPair.toMap()};
         json.remove(key);
       }
-      if (json[key] == null) {
+      if (!json.containsKey(key)) {
         continue;
       }
       attributes[key] = json[key];
@@ -289,9 +289,9 @@ class Japx {
     }
     if (value is List) {
       final list = json[key] as List;
-      return list.map((e) => e as Map<String, dynamic>).toList();
+      return list.map((e) => <String, dynamic>{...(e as Map)}).toList();
     } else {
-      return [value as Map<String, dynamic>];
+      return [<String, dynamic>{...(value as Map)}];
     }
   }
 

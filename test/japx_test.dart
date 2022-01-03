@@ -48,6 +48,10 @@ void main() {
     expect(decoded['data']['author']['categories'], isNotEmpty);
     expect(expected['data']['author']['categories'], isNotEmpty);
   });
+  test(
+      'Null attributes decoding',
+      () async => compare(
+          Japx.decode(await decodingSample9()), await resultDecoding9()));
 
   test(
       'Basic encoding',
@@ -73,6 +77,10 @@ void main() {
       'List encoding',
       () async => compare(
           Japx.encode(await encodingSample6()), await resultEncoding6()));
+  test(
+      'Null attributes encoding',
+      () async => compare(
+          Japx.encode(await encodingSample7()), await resultEncoding7()));
 }
 
 void compare(Map<String, dynamic> sample, Map<String, dynamic> result) =>
