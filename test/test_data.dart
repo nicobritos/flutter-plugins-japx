@@ -18,6 +18,8 @@ Future<Map<String, dynamic>> decodingSample7() async =>
     parseJsonFromAssets('packages/japx/assets/decoding/decoding-7.json');
 Future<Map<String, dynamic>> decodingSample8() async =>
     parseJsonFromAssets('packages/japx/assets/decoding/decoding-8.json');
+Future<Map<String, dynamic>> decodingSample9() async =>
+    parseJsonFromAssets('packages/japx/assets/decoding/decoding-9.json');
 
 Future<Map<String, dynamic>> encodingSample1() async =>
     parseJsonFromAssets('packages/japx/assets/encoding/encoding-1.json');
@@ -31,6 +33,8 @@ Future<Map<String, dynamic>> encodingSample5() async =>
     parseJsonFromAssets('packages/japx/assets/encoding/encoding-5.json');
 Future<Map<String, dynamic>> encodingSample6() async =>
     parseJsonFromAssets('packages/japx/assets/encoding/encoding-6.json');
+Future<Map<String, dynamic>> encodingSample7() async =>
+    parseJsonFromAssets('packages/japx/assets/encoding/encoding-7.json');
 
 Future<Map<String, dynamic>> resultDecoding1() async =>
     parseJsonFromAssets('packages/japx/assets/result/decoding/result-decoding-1.json');
@@ -48,6 +52,8 @@ Future<Map<String, dynamic>> resultDecoding7() async =>
     parseJsonFromAssets('packages/japx/assets/result/decoding/result-decoding-7.json');
 Future<Map<String, dynamic>> resultDecoding8() async =>
     parseJsonFromAssets('packages/japx/assets/result/decoding/result-decoding-8.json');
+Future<Map<String, dynamic>> resultDecoding9() async =>
+    parseJsonFromAssets('packages/japx/assets/result/decoding/result-decoding-9.json');
 
 Future<Map<String, dynamic>> resultEncoding1() async =>
     parseJsonFromAssets('packages/japx/assets/result/encoding/result-encoding-1.json');
@@ -61,6 +67,8 @@ Future<Map<String, dynamic>> resultEncoding5() async =>
     parseJsonFromAssets('packages/japx/assets/result/encoding/result-encoding-5.json');
 Future<Map<String, dynamic>> resultEncoding6() async =>
     parseJsonFromAssets('packages/japx/assets/result/encoding/result-encoding-6.json');
+Future<Map<String, dynamic>> resultEncoding7() async =>
+    parseJsonFromAssets('packages/japx/assets/result/encoding/result-encoding-7.json');
 
 Future<Map<String, dynamic>> parseJsonFromAssets(String assetsPath) async {
   Map<String, dynamic>? json = jsonDecode(await rootBundle.loadString(assetsPath));
