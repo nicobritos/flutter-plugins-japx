@@ -222,7 +222,11 @@ class Japx {
       json.remove(key);
     }
     json[_attributes] = attributes;
-    json[_relationships] = relationships;
+
+    if (relationships.isNotEmpty) {
+      json[_relationships] = relationships;
+    }
+
     return json;
   }
 
